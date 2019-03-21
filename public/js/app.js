@@ -21,8 +21,8 @@ fetch('/weather?address=' + address)
             console.log(data);
             error.textContent = "";
             message.textContent = `
-            Summary : ${data.forecast.summary}
-            Temperature : ${data.forecast.temperature}
+            Summary : ${data.forecast}
+            Locations : ${data.location}
             `;
         }
 
