@@ -15,11 +15,9 @@ const forecast = (longitude, latitude, callback ) => {
             // })
             
             
-            const {summary, temperature, precipProbability} = body.currently
-            callback(undefined,{
-                summary: summary, 
-                temperature:temperature, 
-                precipProbability:precipProbability
+            const {summary, temperature, precipProbability,visibility, pressure} = body.currently;
+            callback(undefined, {
+                endUserMessage: `It is currently ${summary}, the temprature is ${temperature}, chances of rain is ${precipProbability}, the pressure is ${pressure} and the visibility is ${visibility}`, 
             })
         }
     }) 

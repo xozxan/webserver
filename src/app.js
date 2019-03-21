@@ -67,12 +67,12 @@ app.get('/weather', (req, res) => {
             }
             
             //const {temperature, chanceOfRain} = forecastData; 
-
+            console.log(forecastData);
             res.send({
                 //temperature : temperature, 
                 //chanceOfRain : chanceOfRain, 
-                forecast : forecastData,
-                location: location
+                forecast : forecastData.endUserMessage,
+                location: location, 
 
             })
         })
