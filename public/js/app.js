@@ -10,7 +10,7 @@
 
 
 const fetchWeather = (address) => {
-fetch('http://127.0.0.1:3000/weather?address=' + address)
+fetch('/weather?address=' + address)
 .then((response) => {
     response.json().then((data) => {
         if(data.error){
